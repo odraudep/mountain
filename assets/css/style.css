@@ -51,11 +51,6 @@ header img {
   transform: translatey(-100px);
 }
 
-#hsun {
-  opacity: .6;
-  top: 375px;
-}
-
 #hm2 {
   z-index: 2;
 }
