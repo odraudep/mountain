@@ -13,8 +13,9 @@
 }
 
 body {
-  height: 500vh;
+  height: 300vh;
   background-color: var(--main-bg-color);
+  overflow-x: hidden;
 }
 
 /*******************HEADER*******************/
@@ -62,6 +63,50 @@ header img {
 #hm1 {
   margin-bottom: -105px;
   z-index: 3;
+}
+
+.clouds_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  animation: cloud 10s linear infinite;
+}
+
+.clouds_container img:nth-child(even) {
+  transform: scale(.9) translateY(-30px);
+}
+
+.clouds_container img:nth-child(odd) {
+  transform: scale(.7) translateY(30px);
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-600vh);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(0);
+  }
+}
+
+.clouds img {
+  width: 190px;
+  height: 130px;
 }
 
 #htxt {
